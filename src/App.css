@@ -1,0 +1,59 @@
+html,
+body,
+#root {
+  height: 100%;
+  font-family: sans-serif;
+}
+.gen-styles {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+/* header */
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border: solid red;
+}
+.app-title {
+  margin-left: 2rem;
+  border: solid orange;
+}
+.navbar {
+  display: flex;
+  gap: 1rem;
+  margin-right: 2rem;
+  margin-bottom: 0;
+  border: solid orange;
+}
+.divider-header {
+  height: 2px;
+  margin: 0;
+  background-color: black;
+  width: 100%;
+}
+/* main */
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* footer */
+.footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+.divider-footer {
+  height: 2px;
+  background-color: black;
+  margin: 0;
+  width: 100%;
+}
