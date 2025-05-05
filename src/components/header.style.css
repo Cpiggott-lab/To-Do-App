@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: turquoise;
+}
+.app-title {
+  margin-left: 2rem;
+}
+.navbar {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.3rem;
+  margin-right: 2rem;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+.divider-header {
+  height: 2px;
+  margin: 0;
+  background-color: black;
+  width: 100%;
+}

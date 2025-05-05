@@ -1,31 +1,17 @@
-import { useState } from "react";
-// import reactLogo from './assets/react.svg'
 import "./App.css";
+import List from "./components/todos-list.jsx";
+import Footer from "./components/footer.jsx";
+import Headers from "./components/header.jsx";
 
 function App() {
-  const [] = useState(0);
-
   return (
-    <>
-      <div className="gen-styles">
-        <div className="header">
-          <h1 className="app-title">To-Do-Mich</h1>
-          <div className="navbar">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-          </div>
-        </div>
-        <div className="divider-header"></div>
-        <div className="main-content">Main Content</div>
-        <footer className="footer">
-          <div className="divider-footer"></div>
-
-          <a href="https://github.com/Cpiggott-lab/To-Do-App">
-            Github Repository
-          </a>
-        </footer>
-      </div>
-    </>
+    <div className="gen-styles">
+      <Headers />
+      <main className="main">
+        <List />
+      </main>
+      <Footer />
+    </div>
   );
 }
 

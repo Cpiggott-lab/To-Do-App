@@ -1,0 +1,20 @@
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  width: 500px;
+  font-size: 1.3rem;
+}
+.delete-button {
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  background-color: turquoise;
+  padding: 6px;
+  cursor: pointer;
+}
+.delete-button :hover {
+  background-color: purple;
+}

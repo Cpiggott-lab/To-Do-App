@@ -1,0 +1,17 @@
+.footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: turquoise;
+  padding-bottom: 15px;
+}
+
+.divider-footer {
+  height: 2px;
+  background-color: black;
+  margin: 0;
+  width: 100%;
+}
