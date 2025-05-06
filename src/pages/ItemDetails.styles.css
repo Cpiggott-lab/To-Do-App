@@ -1,0 +1,25 @@
+.item-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  background-color: grey;
+  padding: 10px;
+}
+
+.item-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  background: transparent;
+  padding: 2rem 1rem;
+  background-image: linear-gradient(90deg, white, white),
+    linear-gradient(90deg, hsl(289, 65%, 64%), hsl(226, 78%, 67%));
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  border: 40px solid transparent;
+  border-radius: 5rem;
+}

@@ -5,13 +5,17 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  background-color: turquoise;
+  background-image: linear-gradient(
+    to right,
+    hsl(289, 65%, 64%),
+    hsl(226, 78%, 67%)
+  );
   padding-bottom: 15px;
 }
 
 .divider-footer {
-  height: 2px;
-  background-color: black;
+  height: 70px;
+  background-image: linear-gradient(to bottom, gray, black);
   margin: 0;
   width: 100%;
 }

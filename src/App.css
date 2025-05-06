@@ -12,7 +12,3 @@ body,
   flex-direction: column;
   justify-content: space-evenly;
 }
-
-.main {
-  height: 100vh;
-}

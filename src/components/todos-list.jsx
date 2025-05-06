@@ -8,10 +8,11 @@ export default function TodosList() {
   const handleDelete = (taskToDelete) => {
     setTasks((prev) => prev.filter((task) => task.task !== taskToDelete));
   };
+  console.log(tasks);
   return (
     <ul className="main-content">
-      {tasks.map((task, i) => (
-        <TodoCard key={task.task + i} task={task} onDelete={handleDelete} />
+      {tasks.map((task) => (
+        <TodoCard key={task.id} task={task} onDelete={handleDelete} />
       ))}
     </ul>
   );
