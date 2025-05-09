@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import TodoCard from "./todo-card";
 import "./todos-list.style.css";
-import tasksData from "../assets/tasks.json";
 
-export default function TodosList() {
-  const [tasks, setTasks] = useState(tasksData);
+export default function TodosList({ tasks, setTasks }) {
   const handleDelete = (taskToDelete) => {
     setTasks((prev) => prev.filter((task) => task.task !== taskToDelete));
   };
@@ -12,7 +10,13 @@ export default function TodosList() {
   return (
     <ul className="main-content">
       {tasks.map((task) => (
-        <TodoCard key={task.id} task={task} onDelete={handleDelete} />
+        <TodoCard
+          key={task.id}
+          task={task}
+          taskName={task.taskName}
+          completed={task.completed}
+          onDelete={handleDelete}
+        />
       ))}
     </ul>
   );

@@ -12,10 +12,3 @@
   );
   padding-bottom: 15px;
 }
-
-.divider-footer {
-  height: 70px;
-  background-image: linear-gradient(to bottom, gray, black);
-  margin: 0;
-  width: 100%;
-}

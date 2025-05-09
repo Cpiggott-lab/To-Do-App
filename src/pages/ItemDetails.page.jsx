@@ -4,7 +4,7 @@ import "./ItemDetails.styles.css";
 
 export function ItemDetails() {
   const { id } = useParams();
-  const task = tasks.find((task) => task.id === parseInt(id));
+  const task = tasks.find((task) => task.id === +id);
 
   return (
     <>
@@ -13,6 +13,7 @@ export function ItemDetails() {
           <h1>Task Details</h1>
           <p>Task:{task.task}</p>
           <p>Status: {task.completed ? "Completed ✔️" : "Not completed ❌"}</p>
+          <button className="edit-button">Edit</button>
         </div>
       </div>
     </>
