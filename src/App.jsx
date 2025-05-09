@@ -2,6 +2,7 @@ import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import Footer from "./components/footer.jsx";
 import Headers from "./components/header.jsx";
+
 import { Dashboard, About, ItemDetails, NotFound } from "./pages";
 
 const routes = [

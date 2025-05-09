@@ -8,10 +8,10 @@
     hsl(226, 78%, 67%),
     hsl(289, 65%, 64%)
   );
-
   /* background-image: linear-gradient(90deg, white, white),
     linear-gradient(90deg, hsl(289, 65%, 64%), hsl(226, 78%, 67%)); */
 }
+
 .app-title {
   margin-left: 2rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -19,6 +19,7 @@
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
 }
+
 .navbar {
   display: flex;
   gap: 1rem;
@@ -26,10 +27,21 @@
   margin-right: 2rem;
   margin-bottom: 0;
   font-weight: bold;
+  color: hsl(226, 78%, 67%);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
-.divider-header {
-  height: 70px;
-  background-image: linear-gradient(to bottom, black, gray);
-  margin: 0;
-  width: 100%;
+
+.navbar a,
+.navbar a:visited,
+.navbar a:active {
+  color: hsl(226, 78%, 67%);
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.navbar a:hover {
+  color: black;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+  text-decoration: underline;
 }
