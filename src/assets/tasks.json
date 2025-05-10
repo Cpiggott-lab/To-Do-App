@@ -1,13 +1,44 @@
 [
-  { "id": 1, "task": "Read the project brief", "completed": true },
-  { "id": 2, "task": "Create a project repository", "completed": false },
   {
-    "id": 3,
-    "task": "Create React application using Vite",
+    "id": 1,
+    "taskName": "Read the project brief",
+    "task": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel sapien eu lacus commodo dignissim.",
+    "completed": true
+  },
+  {
+    "id": 2,
+    "taskName": "Create a project repository",
+    "task": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Curabitur rutrum felis at eros consequat, at feugiat arcu facilisis.",
     "completed": false
   },
-  { "id": 4, "task": "Finish Day 1 Development Tasks", "completed": false },
-  { "id": 5, "task": "Finish Day 1 Research Tasks", "completed": false },
-  { "id": 6, "task": "Finish Day 2 Development Tasks", "completed": false },
-  { "id": 7, "task": "Finish Day 2 Research Tasks", "completed": false }
+  {
+    "id": 3,
+    "taskName": "Create React application using Vite",
+    "task": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "completed": false
+  },
+  {
+    "id": 4,
+    "taskName": "Finish Day 1 Development Tasks",
+    "task": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "completed": false
+  },
+  {
+    "id": 5,
+    "taskName": "Finish Day 1 Research Tasks",
+    "task": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "completed": false
+  },
+  {
+    "id": 6,
+    "taskName": "Finish Day 2 Development Tasks",
+    "task": "Fusce in tellus in nulla sagittis lacinia. Pellentesque nec turpis cursus, pulvinar purus non, luctus enim.",
+    "completed": false
+  },
+  {
+    "id": 7,
+    "taskName": "Finish Day 2 Research Tasks",
+    "task": "Morbi nec orci vitae odio vehicula vestibulum. Aenean fermentum est et tellus pretium viverra.",
+    "completed": false
+  }
 ]

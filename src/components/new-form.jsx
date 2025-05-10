@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import "./new-form.style.css";
-import TodoCard from "./todo-card.jsx";
-import TodoList from "./todos-list.jsx";
 
 export function NewForm({ setTasks }) {
   const [task, setTask] = useState("");
@@ -10,16 +8,18 @@ export function NewForm({ setTasks }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!task || !taskName) {
+      alert("Please fill in all fields");
+      return;
+    }
+
     const newTask = {
+      id: Date.now(),
       task,
       taskName,
       completed,
     };
 
-    if (!task || !taskName) {
-      alert("Please fill in all fields");
-      return;
-    }
     setTasks((prev) => {
       const foundTask = prev.find((t) => t.task === task);
       if (foundTask) {
@@ -28,6 +28,10 @@ export function NewForm({ setTasks }) {
       }
       return [newTask, ...prev];
     });
+
+    setTask("");
+    setTaskName("");
+    setCompleted(false);
   };
 
   const handleInput = (e, setState, isChecked = false) => {
@@ -50,16 +54,19 @@ export function NewForm({ setTasks }) {
         placeholder="Add a new task"
       />
       <div className="checkbox-container">
-        <label>
-          Completed?
+        <label className="checkbox-label">
+          Done?
           <input
+            className="checkbox-input"
             type="checkbox"
             name="completed"
             checked={completed}
             onChange={(e) => handleInput(e, setCompleted, true)}
           />
         </label>
-        <button type="submit">Add</button>
+        <button className="add-button" type="submit">
+          Add
+        </button>
       </div>
     </form>
   );
