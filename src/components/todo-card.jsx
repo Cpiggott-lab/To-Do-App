@@ -6,10 +6,14 @@ function TodoCard({ task, onDelete }) {
   return (
     <li className="task-item">
       <div className="task-content">
-        <span className="task-name">{task.taskName}</span>
         <Link to={`/item/${task.id}`} className="task-link">
-          {task.task} {task.completed ? "✔️" : "❌"}
+          <span className="task-name">{task.taskName}</span>
         </Link>
+        <p className="task-description">{task.task}</p>{" "}
+        {/* ✨ show description separately */}
+        <p className="task-status">
+          Status: {task.completed ? "Completed ✔️" : "Not Completed ❌"}
+        </p>
       </div>
       <button onClick={() => onDelete(task.id)} className="delete-button">
         Delete

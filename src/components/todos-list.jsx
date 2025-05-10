@@ -1,6 +1,5 @@
 import React from "react";
 import TodoCard from "./todo-card";
-import "./todos-list.style.css";
 
 export default function TodosList({ tasks, setTasks }) {
   const handleDelete = (idToDelete) => {
