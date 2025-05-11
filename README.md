@@ -1,68 +1,97 @@
-# To-Do-Mich
+📄 README.md
 
-A simple personal to-do list app built with React. This lightweight project allows users to manage daily tasks in a clean and responsive interface.
+URL link: https://cpiggott-lab.github.io/To-Do-App/
 
-## ✨ Features
+# To-Do App
 
-- Add new tasks
-- Mark tasks as complete
-- Remove tasks from the list
-- Clean, minimal UI
-- Responsive layout
+A functional To-Do application built with React, allowing users to create, view, edit, and delete tasks. Tasks are saved to localStorage for persistence across sessions.
 
-## 🚀 Getting Started
+---
 
-### Prerequisites
+## Features
 
-- [Node.js](https://nodejs.org/) installed
-- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+- Add new tasks with a title, description, and status (completed or not completed)
+- View full task details
+- Edit existing tasks
+- Delete tasks
+- Tasks persist in browser localStorage
+- Responsive design
+- Sticky add-task form during scrolling
 
-### Installation
+---
+
+## Technologies Used
+
+- React (Vite)
+- JavaScript (ES6+)
+- CSS (Flexbox, gradients, sticky positioning)
+- React Router DOM
+- localStorage API
+
+---
+
+## Folder Structure
+
+src/
+├── components/
+│ ├── new-form.jsx
+│ ├── new-form.style.css
+│ ├── todo-card.jsx
+│ ├── todo-card.style.css
+│ └── todos-list.jsx
+├── pages/
+│ ├── Dashboard.page.jsx
+│ ├── About.page.jsx
+│ ├── ItemDetails.page.jsx
+│ ├── EditItemDetails.page.jsx
+│ ├── NotFound.page.jsx
+│ └── index.jsx
+├── assets/
+│ └── tasks.json
+├── App.jsx
+└── main.jsx
+
+---
+
+## Getting Started
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/Cpiggott-lab/To-Do-App.git
-   cd To-Do-App
-   Install dependencies:
+   git clone https://github.com/your-username/todo-app.git
+   cd todo-app
+
+   2.	Install dependencies:
    ```
 
-bash
-Copy
-Edit
 npm install
-Run the development server:
 
-bash
-Copy
-Edit
+    3.	Start the development server:
+
 npm run dev
-Open http://localhost:5173 in your browser.
 
-🛠 Built With
-React
+    4.	Open in your browser:
 
-Vite
+Visit https://cpiggott-lab.github.io/To-Do-App/
 
-HTML + CSS
+⸻
 
-📁 Folder Structure
-bash
-Copy
-Edit
-src/
-├── components/ # Reusable components (if applicable)
-├── App.jsx # Main app component
-├── App.css # Global styles
-├── main.jsx # Entry point
-💡 Future Improvements
-Task editing
+License
 
-Due dates and reminders
+This project is licensed under the MIT License.
 
-Dark mode
+⸻
 
-Persistent storage (e.g., localStorage or backend integration)
+Author
+• Christopher Piggott
 
-📄 License
-This project is open source and available under the MIT License.
+---
+
+# ✅ This version:
+
+- Only factual content
+- No emojis
+- No extra "future features" list
+- Straight to the point, professional tone
+
+---
