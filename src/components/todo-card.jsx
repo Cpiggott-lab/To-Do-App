@@ -10,7 +10,6 @@ function TodoCard({ task, onDelete }) {
           <span className="task-name">{task.taskName}</span>
         </Link>
         <p className="task-description">{task.task}</p>{" "}
-        {/* ✨ show description separately */}
         <p className="task-status">
           Status: {task.completed ? "Completed ✔️" : "Not Completed ❌"}
         </p>

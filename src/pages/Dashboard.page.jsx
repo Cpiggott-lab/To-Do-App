@@ -5,10 +5,12 @@ import "./Dashboard.styles.css";
 export function Dashboard({ tasks, setTasks }) {
   return (
     <div className="dashboard-container">
-      <div className="new-task-form">
-        <NewForm setTasks={setTasks} />
+      <div className="left-column">
+        <div className="new-task-form">
+          <NewForm setTasks={setTasks} />
+        </div>
       </div>
-      <div className="todos-list">
+      <div className="right-column">
         <TodosList tasks={tasks} setTasks={setTasks} />
       </div>
     </div>
