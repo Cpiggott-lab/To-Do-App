@@ -5,6 +5,7 @@ import Headers from "./components/header.jsx";
 import { Dashboard, About, ItemDetails, NotFound } from "./pages";
 import EditItemDetails from "./pages/editItemDetails.page.jsx";
 import tasksData from "./assets/tasks.json";
+import "./App.css";
 
 function App() {
   const [tasks, setTasks] = useState(() => {
@@ -17,23 +18,26 @@ function App() {
   }, [tasks]);
 
   return (
-    <div className="gen-styles">
+    <div className="app-container">
       <Headers />
-      <main className="main">
-        <Routes>
-          <Route
-            path="/"
-            element={<Dashboard tasks={tasks} setTasks={setTasks} />}
-          />
-          <Route path="/about" element={<About />} />
-          <Route path="/item/:id" element={<ItemDetails tasks={tasks} />} />
-          <Route
-            path="/edit/:id"
-            element={<EditItemDetails tasks={tasks} setTasks={setTasks} />}
-          />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </main>
+      <div className="main-content">
+        <main className="main">
+          <Routes>
+            <Route
+              path="/"
+              element={<Dashboard tasks={tasks} setTasks={setTasks} />}
+            />
+            <Route path="/about" element={<About />} />
+            <Route path="/item/:id" element={<ItemDetails tasks={tasks} />} />
+            <Route
+              path="/edit/:id"
+              element={<EditItemDetails tasks={tasks} setTasks={setTasks} />}
+            />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </main>
+      </div>
+
       <Footer />
     </div>
   );
