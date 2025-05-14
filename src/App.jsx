@@ -12,11 +12,16 @@ function App() {
     const savedTasks = localStorage.getItem("tasks");
     return savedTasks ? JSON.parse(savedTasks) : tasksData;
   });
+  //When the app first loads, it checks if there are any tasks saved in localStorage.
+  //If yes, it loads them.
+  //If no, it loads a default task list from tasksData.json.
+  //This ensures that users keep their data even after refreshing the page."
 
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
-
+  //This effect runs whenever the tasks state changes.
+  //It saves the current tasks to localStorage, ensuring that the data persists across page refreshes.
   return (
     <div className="app-container">
       <Headers />

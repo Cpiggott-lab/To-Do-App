@@ -6,6 +6,7 @@ export function NewForm({ setTasks }) {
   const [taskName, setTaskName] = useState("");
   const [completed, setCompleted] = useState(false);
 
+  //Validates, prevents duplicates, creates a new task.
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!task || !taskName) {

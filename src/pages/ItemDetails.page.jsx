@@ -2,7 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import "./ItemDetails.styles.css";
 
 export function ItemDetails({ tasks }) {
-  const { id } = useParams();
+  const { id } = useParams(); //Just grapping the id from url
   const task = tasks.find((task) => task.id === +id);
 
   if (!task) {
