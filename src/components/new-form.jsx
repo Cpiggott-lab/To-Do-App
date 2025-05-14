@@ -9,18 +9,23 @@ export function NewForm({ setTasks }) {
   //Validates, prevents duplicates, creates a new task.
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    //Checks if the task and taskName are empty
     if (!task || !taskName) {
       alert("Please fill in all fields");
       return;
     }
-
+    //Creates a new task object with a unique id
+    //The id is generated using the current timestamp
     const newTask = {
       id: Date.now(),
       task,
       taskName,
       completed,
     };
-
+    //Checks if the task already exists in the tasks array
+    //If it does, it alerts the user and prevents adding the task
+    //If it doesn't, it adds the new task to the tasks array
     setTasks((prev) => {
       const foundTask = prev.find((t) => t.task === task);
       if (foundTask) {
@@ -29,12 +34,14 @@ export function NewForm({ setTasks }) {
       }
       return [newTask, ...prev];
     });
-
+    //Resets the form fields to their initial state
+    //This is done to clear the input fields after adding a new task
     setTask("");
     setTaskName("");
     setCompleted(false);
   };
-
+  //Handles the input changes for the task and taskName fields
+  //It updates the state with the new value
   const handleInput = (e, setState, isChecked = false) => {
     setState(isChecked ? e.target.checked : e.target.value);
   };
