@@ -21,16 +21,9 @@ export function ItemDetails({ tasks }) {
     <div className="item-details-container">
       <div className="item-details">
         <h1>Task Details</h1>
-        <p>
-          <strong>Task Name:</strong> {task.taskName || "No Name"}
-        </p>
-        <p>
-          <strong>Description:</strong> {task.task}
-        </p>
-        <p>
-          <strong>Status:</strong>{" "}
-          {task.completed ? "Completed ✔️" : "Not completed ❌"}
-        </p>
+        <p>Task Name:{task.taskName || "No Name"}</p>
+        <p>Description: {task.task}</p>
+        <p>Status: {task.completed ? "Completed ✔️" : "Not completed ❌"}</p>
         <Link to={`/edit/${task.id}`}>
           <button>Edit Item</button>
         </Link>

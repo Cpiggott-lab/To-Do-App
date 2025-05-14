@@ -25,19 +25,33 @@ const EditItemDetails = ({ tasks, setTasks }) => {
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: type === "checkbox" ? checked : value,
-    }));
+
+    setFormData((prevData) => {
+      const updatedData = { ...prevData };
+
+      if (type === "checkbox") {
+        updatedData[name] = checked;
+      } else {
+        updatedData[name] = value;
+      }
+
+      return updatedData;
+    });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setTasks((prevTasks) =>
-      prevTasks.map((task) =>
-        task.id === +id ? { ...task, ...formData } : task
-      )
-    );
+
+    setTasks((prevTasks) => {
+      return prevTasks.map((task) => {
+        if (task.id === +id) {
+          return { ...task, ...formData };
+        } else {
+          return task;
+        }
+      });
+    });
+
     navigate(`/item/${id}`);
   };
 
