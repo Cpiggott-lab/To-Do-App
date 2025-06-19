@@ -84,14 +84,3 @@ This project is licensed under the MIT License.
 
 Author
 • Christopher Piggott
-
----
-
-# ✅ This version:
-
-- Only factual content
-- No emojis
-- No extra "future features" list
-- Straight to the point, professional tone
-
----
